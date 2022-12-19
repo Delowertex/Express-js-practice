@@ -51,6 +51,14 @@ app.post("/india", function(req, res){
     res.send("This is india");
 });
 
+//response header
+app.post("/five", function(req, res){
+    res.append("name", "Delower");
+    res.append("city", "Comilla");
+    res.append("age", "38");
+    res.status(202).end("Helow append header");
+});
+
 
 app.listen(8000, function(){
     console.log("server run success");
